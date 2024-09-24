@@ -1,0 +1,16 @@
+{
+    "requires": {
+        "db": {
+            "[pg]": {
+                "kind": "postgres",
+                "credentials": {
+                    "host": "localhost",
+                    "port": 5432,
+                    "user": "postgres",
+                    "password": "${DB_PASSWORD}",
+                    "database": "${DB_USER}"
+                }
+            }
+        }
+    }
+}

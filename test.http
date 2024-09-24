@@ -1,0 +1,34 @@
+###
+#
+# Browse Products
+#
+GET http://localhost:4004/odata/v4/catalog/Products?
+  # &$select=name,stock
+  # &sap-language=de
+
+###
+#
+# Get Customer wit ID 101
+#
+GET http://localhost:4004/odata/v4/catalog/Customers(101)
+
+###
+#
+# Update Customer with ID 101
+#
+POST http://localhost:4004/odata/v4/catalog/Customers
+Content-Type: application/json
+
+{"ID": 101, "name": "Some Customer"}
+
+
+###
+#
+# Order a Product
+#
+POST http://localhost:4004/odata/v4/catalog/Orders
+Content-Type: application/json;IEEE754Compatible=true
+
+{"product_ID": 201, "quantity": 5}
+
+
